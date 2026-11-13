@@ -1,0 +1,15 @@
+schema_version = "1.0.0"
+
+id = "miami26_bay"
+version = "1.0.0"
+name = "Miami '26 Bay"
+tagline = "Turquoise water, sky blue and lavender towers of a Miami bay"
+maintainer = "stillgbx"
+type = "theme"
+website = "https://github.com/stillgbx/miami26-blender"
+tags = ["Dark", "Colorful"]
+
+blender_version_min = "4.2.0"
+
+license = ["SPDX:GPL-3.0-or-later"]
+copyright = ["2026 stillgbx"]

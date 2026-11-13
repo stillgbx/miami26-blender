@@ -1,0 +1,15 @@
+schema_version = "1.0.0"
+
+id = "miami26_bay_light"
+version = "1.0.0"
+name = "Miami '26 Bay Light"
+tagline = "The pastel sky and water of a Miami bay, in light"
+maintainer = "stillgbx"
+type = "theme"
+website = "https://github.com/stillgbx/miami26-blender"
+tags = ["Light", "Colorful"]
+
+blender_version_min = "4.2.0"
+
+license = ["SPDX:GPL-3.0-or-later"]
+copyright = ["2026 stillgbx"]
