@@ -1,7 +1,7 @@
 schema_version = "1.0.0"
 
 id = "miami26_sunset_light"
-version = "1.0.0"
+version = "1.1.0"
 name = "Miami '26 Sunset Light"
 tagline = "The sky of a Miami dusk, from lavender to peach, in light"
 maintainer = "stillgbx"

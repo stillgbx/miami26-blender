@@ -1,9 +1,9 @@
 schema_version = "1.0.0"
 
 id = "miami26_sunset"
-version = "1.0.0"
+version = "1.1.0"
 name = "Miami '26 Sunset"
-tagline = "Magenta, sunset orange and gold over a violet Miami sky"
+tagline = "Magenta, peach and plum palm trees under a Miami dusk sky"
 maintainer = "stillgbx"
 type = "theme"
 website = "https://github.com/stillgbx/miami26-blender"

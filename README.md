@@ -5,8 +5,8 @@
 
 Miami colors for Blender 4.2 and later. Two palettes, each in a dark and a light version:
 
-* **Bay**: a day on the bay. Turquoise water, sky blue, lavender towers, pink facades and warm sand.
-* **Sunset**: dusk on the ocean front. Magenta, sunset orange, gold and periwinkle buildings under a violet sky.
+* **Bay**: a day on the bay. Sky blue, turquoise water, lavender palm trees, peach facades and warm sand.
+* **Sunset**: dusk on the ocean front. Magenta, peach and pale gold under a periwinkle and lavender sky, with plum palm trees.
 
 | | Dark | Light |
 | --- | --- | --- |
@@ -37,7 +37,7 @@ Also available for [Visual Studio](https://github.com/stillgbx/miami26-vs) and [
 
 Blender installs themes as extensions, one per theme.
 
-1. Download the zip of the theme you want from the [latest release](https://github.com/stillgbx/miami26-blender/releases/latest), for example `miami26_sunset-1.0.0.zip`.
+1. Download the zip of the theme you want from the [latest release](https://github.com/stillgbx/miami26-blender/releases/latest), for example `miami26_sunset-1.1.0.zip`.
 2. In Blender, open *Edit > Preferences > Get Extensions*, then *Install from Disk...* in the menu at the top right, and pick the zip.
 3. The theme is applied right away. To switch later, pick it in *Preferences > Themes*.
 

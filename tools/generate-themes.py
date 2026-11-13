@@ -5,8 +5,8 @@ single XML file):
 
 Two palettes, each in a dark and a light version, the same as the Visual Studio and VS Code themes
 (github.com/stillgbx/miami26-vs, github.com/stillgbx/miami26-vscode):
-* Bay: a day on the bay. Turquoise water, sky blue, lavender towers, pink facades, warm sand.
-* Sunset: dusk on the ocean front. Magenta, sunset orange, gold, periwinkle buildings, violet sky.
+* Bay: a day on the bay. Sky blue, turquoise water, lavender palm trees, peach facades, warm sand.
+* Sunset: dusk on the ocean front. Magenta, peach, pale gold, periwinkle and lavender sky, plum palm trees.
 
 The themes are built on the Blender themes exported by tools/export-base-themes.py:
 * The greys of the base, which draw the whole interface, follow the 'ramp' of the palette by lightness.
@@ -24,29 +24,30 @@ import re
 import xml.etree.ElementTree as ET
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-VERSION = '1.0.0'
+VERSION = '1.1.0'
 
 BAY = {
     'id': 'miami26_bay',
     'name': "Miami '26 Bay",
     'file': 'Miami_26_Bay.xml',
     'base': 'dark',
-    'tagline': 'Turquoise water, sky blue and lavender towers of a Miami bay',
-    # The greys of the base by lightness: the night over the bay, up to the light text.
-    'ramp': [(1.00, 'FFFFFF'), (0.93, 'E8F4F6'), (0.90, 'E2EFF2'), (0.76, 'B4CCD7'), (0.60, '7FA0B2'),
-             (0.45, '3A6075'), (0.33, '21435A'), (0.24, '183245'), (0.188, '132838'), (0.157, '10222F'),
-             (0.114, '0C1B26'), (0.094, '08151F'), (0.086, '07131D'), (0.03, '030A10'), (0.00, '000000')],
-    'accent': '2ED3C6',      # the hue of the selection, cursor and playhead
-    'selection': 'FF9CC2',   # the hue of selected and active objects: pink facades
+    'tagline': 'Sky blue, turquoise water and lavender palm trees of a Miami bay',
+    # The greys of the base by lightness: the bay at nightfall. Deep water backgrounds, lilac blue
+    # widgets like the evening sky, up to the light text.
+    'ramp': [(1.00, 'FFFFFF'), (0.93, 'EAF4F2'), (0.90, 'E2EEF2'), (0.76, 'B5C6DA'), (0.60, '7F95B8'),
+             (0.45, '46607A'), (0.33, '2E3F63'), (0.24, '233056'), (0.188, '1C2747'), (0.157, '162538'),
+             (0.114, '102230'), (0.094, '0D1A2A'), (0.086, '0B1626'), (0.03, '050B14'), (0.00, '000000')],
+    'accent': '5FD6C6',      # the hue of the selection, cursor and playhead: turquoise water
+    'selection': 'F5B095',   # the hue of selected and active objects: peach facades
     'ui': {
-        'editor': '0C1B26', 'editor_margin': '0A1720', 'text': 'E8F4F6', 'line_number': '4E7186',
-        'editor_selection': '1E4A5C', 'outliner_active': '2A5F73', 'caret': '2ED3C6',
-        'viewport_top': '183A4D', 'viewport_bottom': '0C1B26',
+        'editor': '102230', 'editor_margin': '0D1C29', 'text': 'EAF4F2', 'line_number': '5F7C9A',
+        'editor_selection': '5A4048', 'outliner_active': '6B4C55', 'caret': '7FD8C8',
+        'viewport_top': '2B3762', 'viewport_bottom': '10303A',
         'success': '7EDC9E', 'error': 'FF6B8B',
     },
     'tokens': {
-        'keyword': '2ED3C6', 'type': 'B9A6FF', 'function': '7CC4FF', 'tag': '7EDC9E', 'variable': 'DCEBF5',
-        'operator': '8FE9E1', 'string': 'FFC98F', 'constant': 'FF9CC2', 'comment': '557489',
+        'keyword': '7FD8C8', 'type': 'A9A6F0', 'function': '8EC6EC', 'tag': 'F5B49C', 'variable': 'E2EEF2',
+        'operator': '9FE3D6', 'string': 'F3DDB0', 'constant': 'F2A0B4', 'comment': '64799C',
     },
 }
 
@@ -55,24 +56,25 @@ BAY_LIGHT = {
     'name': "Miami '26 Bay Light",
     'file': 'Miami_26_Bay_Light.xml',
     'base': 'light',
-    'tagline': 'The pastel sky and water of a Miami bay, in light',
-    # Blender Light draws its backgrounds with mid greys: they become sky blues, its text a deep teal.
-    'ramp': [(1.00, 'F2FAFA'), (0.90, 'E3F2F2'), (0.80, 'D7ECF0'), (0.70, 'C8E3EC'), (0.60, 'B9DAE8'),
-             (0.45, '8DB8CB'), (0.39, '7AA6BA'), (0.30, '45697A'), (0.19, '1F3A48'), (0.10, '17323F'),
-             (0.00, '0B2230')],
-    'accent': '0B7F75',
-    'selection': 'BF2F68',
+    'tagline': 'The sky, water and sand of a Miami bay, in light',
+    # Blender Light draws its backgrounds with mid greys: they become sky blues and mint water, its
+    # lightest fields the sand, its text a deep blue.
+    'ramp': [(1.00, 'FFFBF3'), (0.90, 'FBF3E6'), (0.80, 'E2F2EC'), (0.70, 'D3EEE8'), (0.60, 'B4D8E6'),
+             (0.45, '93B8DC'), (0.39, '80A6CC'), (0.30, '45627E'), (0.19, '233A52'), (0.10, '1B3245'),
+             (0.00, '0E2233')],
+    'accent': '128079',
+    'selection': 'C2386C',   # pink facades
     'ui': {
-        'editor': 'E3F2F2', 'editor_margin': 'D7ECF0', 'text': '17323F', 'line_number': '6E95A3',
-        'editor_selection': 'B2E0DA', 'outliner_active': '9DD6CF', 'caret': '0B7F75',
+        'editor': 'FBF3E6', 'editor_margin': 'F2E6D3', 'text': '1B3245', 'line_number': '7A93AE',
+        'editor_selection': 'F7CDBB', 'outliner_active': 'F2BBA6', 'caret': '128079',
         # Light themes: the outliner names of active and selected items, dark on the pastel rows.
-        'outliner_active_text': '0A4F49', 'outliner_selected_text': 'A3245A',
-        'viewport_top': 'A9CFE2', 'viewport_bottom': 'D3EBEC',
+        'outliner_active_text': '0B5853', 'outliner_selected_text': 'A3245A',
+        'viewport_top': 'A6CBE8', 'viewport_bottom': 'CFEDE6',
         'success': '2A7F47', 'error': 'C62D58',
     },
     'tokens': {
-        'keyword': '0A7A70', 'type': '5E45C4', 'function': '1C65AD', 'tag': '2A7F47', 'variable': '22394D',
-        'operator': '2F7F79', 'string': 'A3561A', 'constant': 'BF2F68', 'comment': '5F7F8C',
+        'keyword': '0E7A74', 'type': '5853B5', 'function': '23689E', 'tag': '9C3F8A', 'variable': '1F3A50',
+        'operator': '2A7579', 'string': 'B04F2A', 'constant': 'C2386C', 'comment': '7380AA',
     },
 }
 
@@ -81,21 +83,22 @@ SUNSET = {
     'name': "Miami '26 Sunset",
     'file': 'Miami_26_Sunset.xml',
     'base': 'dark',
-    'tagline': 'Magenta, sunset orange and gold over a violet Miami sky',
-    'ramp': [(1.00, 'FFFFFF'), (0.93, 'F6EEF6'), (0.90, 'F0E8F4'), (0.76, 'CBC2E0'), (0.60, '9A90BE'),
-             (0.45, '5A5088'), (0.33, '3A3168'), (0.24, '2A2250'), (0.188, '211A3D'), (0.157, '1B1634'),
-             (0.114, '15112A'), (0.094, '0F0C20'), (0.086, '0D0A1C'), (0.03, '06040E'), (0.00, '000000')],
-    'accent': 'FF4FA3',
-    'selection': 'FFA45C',   # sunset orange, close to the Blender orange
+    'tagline': 'Magenta, peach and plum palm trees under a Miami dusk sky',
+    # Plum palm trees for the backgrounds, the night sky for the widgets.
+    'ramp': [(1.00, 'FFFFFF'), (0.93, 'F8EEF4'), (0.90, 'F2E6F0'), (0.76, 'D0BEDE'), (0.60, 'A08AC0'),
+             (0.45, '64508A'), (0.33, '45336A'), (0.24, '3A2A58'), (0.188, '2E1F45'), (0.157, '2A1A3E'),
+             (0.114, '231833'), (0.094, '1C1230'), (0.086, '160E24'), (0.03, '0A0612'), (0.00, '000000')],
+    'accent': 'FF5FAA',
+    'selection': 'FFB27A',   # the peach horizon, close to the Blender orange
     'ui': {
-        'editor': '15112A', 'editor_margin': '120E24', 'text': 'F6EEF6', 'line_number': '62598F',
-        'editor_selection': '4A2A6A', 'outliner_active': '5E3585', 'caret': 'FF4FA3',
-        'viewport_top': '2B1F52', 'viewport_bottom': '3D1B42',
+        'editor': '231833', 'editor_margin': '1E142D', 'text': 'F8EEF4', 'line_number': '7E6A9C',
+        'editor_selection': '5A2F62', 'outliner_active': '6E3A78', 'caret': 'FF5FAA',
+        'viewport_top': '2C2860', 'viewport_bottom': '5E2E52',
         'success': '7EE0A8', 'error': 'FF5C6C',
     },
     'tokens': {
-        'keyword': 'FF4FA3', 'type': 'A9B4F5', 'function': 'FFA45C', 'tag': 'D39BFF', 'variable': 'F3DDF0',
-        'operator': 'FF8FC4', 'string': 'FFD27F', 'constant': 'FF7A6B', 'comment': '7C6FA3',
+        'keyword': 'FF5FAA', 'type': 'A9B4F5', 'function': 'FFB27A', 'tag': 'D6A2F2', 'variable': 'F6E2EE',
+        'operator': 'FF9CC8', 'string': 'F6E2A2', 'constant': 'FF8A7A', 'comment': '8C72A8',
     },
 }
 
@@ -105,21 +108,22 @@ SUNSET_LIGHT = {
     'file': 'Miami_26_Sunset_Light.xml',
     'base': 'light',
     'tagline': 'The sky of a Miami dusk, from lavender to peach, in light',
-    'ramp': [(1.00, 'FFF4EE'), (0.90, 'FBECE4'), (0.80, 'F4DDE4'), (0.70, 'EDD0E0'), (0.60, 'E2C3DE'),
-             (0.45, 'C69FC4'), (0.39, 'B08AA8'), (0.30, '74566F'), (0.19, '3A2350'), (0.10, '2E1A3D'),
+    # The sky at dusk by lightness: peach fields, pink and lavender backgrounds, a periwinkle frame.
+    'ramp': [(1.00, 'FFF6EE'), (0.90, 'FDEBDB'), (0.80, 'F8D8E1'), (0.70, 'EECBE3'), (0.60, 'C9B9EA'),
+             (0.45, 'AFA6E0'), (0.39, '9C96D6'), (0.30, '6C5277'), (0.19, '3A2350'), (0.10, '2E1A3D'),
              (0.00, '1E0F2A')],
-    'accent': 'C2186A',
-    'selection': 'C9612A',
+    'accent': 'C8287A',
+    'selection': 'C2601F',
     'ui': {
-        'editor': 'FBECE4', 'editor_margin': 'F4DDE4', 'text': '2E1A3D', 'line_number': '9C7C96',
-        'editor_selection': 'F2C3D6', 'outliner_active': 'EBAFC8', 'caret': 'C2186A',
+        'editor': 'FDEBDB', 'editor_margin': 'F9DDD3', 'text': '2E1A3D', 'line_number': '9A82A6',
+        'editor_selection': 'F6C4D8', 'outliner_active': 'EEB0CB', 'caret': 'C8287A',
         'outliner_active_text': '7A0F45', 'outliner_selected_text': 'A84A12',
-        'viewport_top': 'D2BFE6', 'viewport_bottom': 'F6D6CC',
-        'success': '2E7D4A', 'error': 'C9392A',
+        'viewport_top': 'C3B6EA', 'viewport_bottom': 'F9CDB0',
+        'success': '2E7D4A', 'error': 'C42B3A',
     },
     'tokens': {
-        'keyword': 'BD1766', 'type': '434BB5', 'function': 'B5561A', 'tag': '7235AD', 'variable': '35203F',
-        'operator': 'A62A66', 'string': '845A00', 'constant': 'C9392A', 'comment': '87718F',
+        'keyword': 'BE1F70', 'type': '4A56B8', 'function': 'A64F18', 'tag': '7A3D8C', 'variable': '35203F',
+        'operator': 'A3306E', 'string': '7F5E00', 'constant': 'B83A28', 'comment': '8E7299',
     },
 }
 
@@ -234,6 +238,14 @@ def set_explicit(theme_el, theme):
     gradient.set('background_type', 'LINEAR')
     gradient.set('high_gradient', '#' + ui['viewport_top'].lower())
     gradient.set('gradient', '#' + ui['viewport_bottom'].lower())
+
+    # Blender 5.3 dropped header_text: the top bar and status bar draw their text with 'text', white in
+    # Blender Light. On the pastel bars of the light themes it must be the dark palette text.
+    if theme['base'] == 'light':
+        for bar in ('topbar/ThemeTopBar', 'statusbar/ThemeStatusBar'):
+            space = theme_el.find(f'{bar}/space/ThemeSpaceGeneric')
+            space.set('text', '#' + ui['text'].lower())
+            space.set('text_hi', '#' + ui['text'].lower())
 
     # The outliner rows of selected items: the editor selection, so that the selected and active object
     # names (in the selection hue) stay readable on them.

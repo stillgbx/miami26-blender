@@ -1,9 +1,9 @@
 schema_version = "1.0.0"
 
 id = "miami26_bay"
-version = "1.0.0"
+version = "1.1.0"
 name = "Miami '26 Bay"
-tagline = "Turquoise water, sky blue and lavender towers of a Miami bay"
+tagline = "Sky blue, turquoise water and lavender palm trees of a Miami bay"
 maintainer = "stillgbx"
 type = "theme"
 website = "https://github.com/stillgbx/miami26-blender"

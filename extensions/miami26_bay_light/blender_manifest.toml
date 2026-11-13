@@ -1,9 +1,9 @@
 schema_version = "1.0.0"
 
 id = "miami26_bay_light"
-version = "1.0.0"
+version = "1.1.0"
 name = "Miami '26 Bay Light"
-tagline = "The pastel sky and water of a Miami bay, in light"
+tagline = "The sky, water and sand of a Miami bay, in light"
 maintainer = "stillgbx"
 type = "theme"
 website = "https://github.com/stillgbx/miami26-blender"
