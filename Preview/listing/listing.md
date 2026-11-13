@@ -4,7 +4,7 @@ The same for the four themes, except the description and the images.
 
 - **Support**: `https://github.com/stillgbx/miami26-blender/issues`
 - **Release notes** (1.0.0): `First release.`
-- **Icon**: `Preview/icon.png` (256 x 256)
+- **Icon**: `Preview/listing/icon.png` (256 x 256, square: the site rounds the corners itself)
 - **Featured image** and **preview**: `Preview/listing/<theme>.png` (1920 x 1080)
 - **Preview description**: `The Scripting workspace, with the 3D viewport, the text editor and the console.`
 
