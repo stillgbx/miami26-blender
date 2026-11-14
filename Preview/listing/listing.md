@@ -3,6 +3,7 @@
 The same for the four themes, except the description and the images.
 
 - **Support**: `https://github.com/stillgbx/miami26-blender/issues`
+- **Release notes** (1.1.1): `The timeline, dope sheet, NLA, video sequencer and movie clip editors follow the theme instead of Blender grey.`
 - **Release notes** (1.1.0): `Repainted to match its reference more closely: key art from a certain game set somewhere in sunny Florida, whose name shall not be spoken. In light themes, the top bar and status bar text is readable again in Blender 5.3.`
 - **Release notes** (1.0.0): `First release.`
 - **Icon**: `Preview/listing/icon.png` (256 x 256, square: the site rounds the corners itself)

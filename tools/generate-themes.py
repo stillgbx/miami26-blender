@@ -24,7 +24,7 @@ import re
 import xml.etree.ElementTree as ET
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-VERSION = '1.1.0'
+VERSION = '1.1.1'
 
 BAY = {
     'id': 'miami26_bay',
@@ -132,7 +132,10 @@ THEMES = [BAY, BAY_LIGHT, SUNSET, SUNSET_LIGHT]
 # Colors kept as they are: they tell bones, collections, strips, node categories, curve handle types
 # and animation states apart.
 KEPT = ('bone_color_sets', 'collection_color', 'strip_color', 'wcol_state', 'ThemeCommonCurves',
-        'sequence_editor', 'nla_editor', 'clip_editor', 'dopesheet_editor', 'ThemeCommonAnim')
+        'ThemeCommonAnim')
+# Editors whose colors are kept (strips, keyframes, markers...), except their greys of background, text
+# and grid: the timeline is a dope sheet, and its grey rows would stand out in a Miami theme.
+KEPT_EDITORS = ('sequence_editor', 'nla_editor', 'clip_editor', 'dopesheet_editor')
 # Node category colors (converter_node, color_node...) are kept, the rest of the node editor follows.
 KEPT_NODE_ATTRS = re.compile(r'_node$|^node_backdrop$')
 
@@ -193,6 +196,9 @@ def recolor(theme, path, attr, value):
     if attr == 'playhead':  # in the animation colors, but it is the interface accent
         return accent(theme, rgb, alpha)
     if any(part in path for part in KEPT):
+        return None
+    if any(part in path for part in KEPT_EDITORS) and not (
+            chroma(rgb) < 12 and ('/space/' in path or attr == 'grid')):
         return None
     if path.endswith('ThemeNodeEditor') and KEPT_NODE_ATTRS.search(attr) and chroma(rgb) >= 12:
         return None

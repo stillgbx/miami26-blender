@@ -153,17 +153,17 @@
       </ThemeFileBrowser>
     </file_browser>
     <nla_editor>
-      <ThemeNLAEditor grid="#2a2a2a" active_action="#99541366" active_action_unset="#4d3b174d" strips="#0d0d0d" strips_selected="#ff8c00" transition_strips="#1c2630" transition_strips_selected="#2e75db" meta_strips="#332642" meta_strips_selected="#692196" sound_strips="#2b3d3d" sound_strips_selected="#1f7a7a" tweak="#4df31a" tweak_duplicate="#d90000" keyframe_border="#000000ff" keyframe_border_selected="#000000ff">
+      <ThemeNLAEditor grid="#17253c" active_action="#99541366" active_action_unset="#4d3b174d" strips="#0d0d0d" strips_selected="#ff8c00" transition_strips="#1c2630" transition_strips_selected="#2e75db" meta_strips="#332642" meta_strips_selected="#692196" sound_strips="#2b3d3d" sound_strips_selected="#1f7a7a" tweak="#4df31a" tweak_duplicate="#d90000" keyframe_border="#000000ff" keyframe_border_selected="#000000ff">
         <space>
-          <ThemeSpaceGeneric back="#303030" title="#ffffff" text="#a6a6a6" text_hi="#ffffff" header="#303030b3" header_text="#eeeeee" header_text_hi="#ffffff">
+          <ThemeSpaceGeneric back="#1c2747" title="#ffffff" text="#90a5c3" text_hi="#ffffff" header="#1c2747b3" header_text="#ebf5f3" header_text_hi="#ffffff">
           </ThemeSpaceGeneric>
         </space>
       </ThemeNLAEditor>
     </nla_editor>
     <dopesheet_editor>
-      <ThemeDopeSheet grid="#161616" keyframe_border="#000000ff" keyframe_border_selected="#000000ff" keyframe_scale_factor="1" summary="#4d272766" anim_interpolation_linear="#94e575cc" anim_interpolation_constant="#e59c7bcc" anim_interpolation_other="#5dbabeb3" simulated_frames="#721e65ff">
+      <ThemeDopeSheet grid="#0b1626" keyframe_border="#000000ff" keyframe_border_selected="#000000ff" keyframe_scale_factor="1" summary="#4d272766" anim_interpolation_linear="#94e575cc" anim_interpolation_constant="#e59c7bcc" anim_interpolation_other="#5dbabeb3" simulated_frames="#721e65ff">
         <space>
-          <ThemeSpaceGeneric back="#303030" title="#eeeeee" text="#a6a6a6" text_hi="#ffffff" header="#303030b3" header_text="#eeeeee" header_text_hi="#ffffff">
+          <ThemeSpaceGeneric back="#1c2747" title="#ebf5f3" text="#90a5c3" text_hi="#ffffff" header="#1c2747b3" header_text="#ebf5f3" header_text_hi="#ffffff">
           </ThemeSpaceGeneric>
         </space>
       </ThemeDopeSheet>
@@ -177,9 +177,9 @@
       </ThemeImageEditor>
     </image_editor>
     <sequence_editor>
-      <ThemeSequenceEditor grid="#303030" movie_strip="#6282a3" movieclip_strip="#8f6e56" image_strip="#8c548c" scene_strip="#999999" audio_strip="#568f6d" effect_strip="#7b5f80" transition_strip="#867acc" color_strip="#99995c" meta_strip="#7b995c" mask_strip="#8f5656" text_strip="#9f926f" active_strip="#ffffff" selected_strip="#ff8f0d" keyframe_border="#000000ff" keyframe_border_selected="#000000ff" preview_back="#000000" metadatabg="#000000" metadatatext="#ffffff" row_alternate="#ffffff05" text_strip_cursor="#71a8ffff" selected_text="#ffffff4d">
+      <ThemeSequenceEditor grid="#1c2747" movie_strip="#6282a3" movieclip_strip="#8f6e56" image_strip="#8c548c" scene_strip="#999999" audio_strip="#568f6d" effect_strip="#7b5f80" transition_strip="#867acc" color_strip="#99995c" meta_strip="#7b995c" mask_strip="#8f5656" text_strip="#9f926f" active_strip="#ffffff" selected_strip="#ff8f0d" keyframe_border="#000000ff" keyframe_border_selected="#000000ff" preview_back="#000000" metadatabg="#000000" metadatatext="#ffffff" row_alternate="#ffffff05" text_strip_cursor="#71a8ffff" selected_text="#ffffff4d">
         <space>
-          <ThemeSpaceGeneric back="#181818" title="#eeeeee" text="#a6a6a6" text_hi="#ffffff" header="#303030b3" header_text="#eeeeee" header_text_hi="#ffffff">
+          <ThemeSpaceGeneric back="#0d1a2a" title="#ebf5f3" text="#90a5c3" text_hi="#ffffff" header="#1c2747b3" header_text="#ebf5f3" header_text_hi="#ffffff">
           </ThemeSpaceGeneric>
         </space>
       </ThemeSequenceEditor>
@@ -241,9 +241,9 @@
       </ThemeConsole>
     </console>
     <clip_editor>
-      <ThemeClipEditor grid="#181818ff" marker_outline="#000000" marker="#808000" active_marker="#ffffff" selected_marker="#ffff00" disabled_marker="#7f0000" locked_marker="#7f7f7f" path_before="#ff0000" path_after="#0000ff" path_keyframe_before="#ffc4c4" path_keyframe_after="#c4c4ff" metadatabg="#000000" metadatatext="#ffffff">
+      <ThemeClipEditor grid="#0d1a2aff" marker_outline="#000000" marker="#808000" active_marker="#ffffff" selected_marker="#ffff00" disabled_marker="#7f0000" locked_marker="#7f7f7f" path_before="#ff0000" path_after="#0000ff" path_keyframe_before="#ffc4c4" path_keyframe_after="#c4c4ff" metadatabg="#000000" metadatatext="#ffffff">
         <space>
-          <ThemeSpaceGeneric back="#303030" title="#eeeeee" text="#a6a6a6" text_hi="#ffffff" header="#303030b3" header_text="#eeeeee" header_text_hi="#ffffff">
+          <ThemeSpaceGeneric back="#1c2747" title="#ebf5f3" text="#90a5c3" text_hi="#ffffff" header="#1c2747b3" header_text="#ebf5f3" header_text_hi="#ffffff">
           </ThemeSpaceGeneric>
         </space>
       </ThemeClipEditor>

@@ -1,7 +1,7 @@
 schema_version = "1.0.0"
 
 id = "miami26_bay"
-version = "1.1.0"
+version = "1.1.1"
 name = "Miami '26 Bay"
 tagline = "Sky blue, turquoise water and lavender palm trees of a Miami bay"
 maintainer = "stillgbx"

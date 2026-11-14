@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1
+
+* The timeline, dope sheet, NLA, video sequencer and movie clip editors follow the theme: their backgrounds, text and grid were left in Blender grey. Their strip, keyframe and marker colors keep their Blender defaults.
+
 ## 1.1.0
 
 The four themes are repainted to match their references more closely: two pieces of key art from a certain game set somewhere in sunny Florida, whose name shall not be spoken.
